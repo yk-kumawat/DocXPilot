@@ -1,0 +1,12 @@
+pyproject.toml
+src/main.py
+src/analyzers/project.py
+src/cli/__init__.py
+src/cli/commands.py
+src/cli/ui.py
+src/docxpilot.egg-info/PKG-INFO
+src/docxpilot.egg-info/SOURCES.txt
+src/docxpilot.egg-info/dependency_links.txt
+src/docxpilot.egg-info/entry_points.txt
+src/docxpilot.egg-info/requires.txt
+src/docxpilot.egg-info/top_level.txt

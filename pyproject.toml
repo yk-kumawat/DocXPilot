@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "docxpilot"
+version = "0.1.0"
+description = "AI-powered documentation generator"
+requires-python = ">=3.10"
+
+dependencies = [
+    "typer",
+    "rich"
+]
+
+[project.scripts]
+docxpilot = "main:app"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+py-modules = ["main"]
+
+[tool.setuptools.packages.find]
+where = ["src"]

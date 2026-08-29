@@ -1,0 +1,7 @@
+Metadata-Version: 2.4
+Name: docxpilot
+Version: 0.1.0
+Summary: AI-powered documentation generator
+Requires-Python: >=3.10
+Requires-Dist: typer
+Requires-Dist: rich

@@ -1,7 +1,8 @@
+import os
 import typer
 
 from analyzers.project import analyze
-from cli.ui import title, success, main_menu
+from cli.ui import title, success, main_menu, select_documents_menu, confirm_generation
 
 app = typer.Typer()
 
@@ -20,10 +21,18 @@ def main(ctx: typer.Context):
         choice = main_menu()
 
         if choice == "Generate Documentation":
-            print("Generate Documentation selected")
+            output_dir = confirm_generation("DocXPilot")
+            if output_dir:
+                os.makedirs(output_dir, exist_ok=True)
+                print("Starting document generation...")
+                success("Document generation started")
 
         elif choice == "Select Documents to Generate":
-            print("Select Documents to Generate selected")
+            selected_docs = select_documents_menu()
+            if selected_docs:
+                print(f"Selected documents: {', '.join(selected_docs)}")
+            elif selected_docs is not None:
+                print("No documents selected.")
 
         elif choice == "Set Document Formats":
             print("Set Document Formats selected")

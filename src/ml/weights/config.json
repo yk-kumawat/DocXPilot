@@ -1,0 +1,11 @@
+{
+  "window_size": 28,
+  "threshold": 0.029061337523162367,
+  "normalization": "percentile_95_clip_3",
+  "training_date": "2026-10-13",
+  "n_train_repos": 35,
+  "n_val_repos": 7,
+  "n_test_repos": 8,
+  "best_val_loss": 0.009501328008870285,
+  "seed": 42
+}

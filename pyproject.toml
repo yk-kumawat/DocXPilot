@@ -4,14 +4,22 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "docxpilot"
-version = "0.1.0"
-description = "AI-powered documentation generator"
+version = "0.2.0"
+description = "AI-powered documentation generator with DSP activity analysis"
 requires-python = ">=3.10"
 
 dependencies = [
     "typer",
-    "rich"
+    "rich",
+    "questionary",
+    "google-genai",
+    "numpy>=1.26.0",
+    "scipy>=1.11.0",
+    "matplotlib>=3.8.0",
 ]
+
+[project.optional-dependencies]
+ml = ["torch>=2.0.0"]
 
 [project.scripts]
 docxpilot = "main:app"
@@ -22,3 +30,6 @@ py-modules = ["main"]
 
 [tool.setuptools.packages.find]
 where = ["src"]
+
+[tool.setuptools.package-data]
+"ml" = ["weights/*.pt", "weights/*.json"]
